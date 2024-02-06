@@ -1,16 +1,17 @@
-# Appendix: Fixing PATH
-If your command line indicates that git is not a recognised command, you must configure your PATH.
+# Исправление переменной PATH
 
-Check to see where git for windows was installed. If you didn't change the default settings, it should be installed in  `C:\Program Files\Git\bin` or `C:\Program Files (x86)\Git\bin`.
+Если ваша командная строка указывает, что git не является распознанным командой, вам необходимо настроить переменную PATH.
 
-Press windows to open the start menu and search for PATH.
+Проверьте, где установлен git for Windows. Если вы не изменяли настройки по умолчанию, он должен быть установлен в `C:\Program Files\Git\bin` или `C:\Program Files (x86)\Git\bin`.
 
-![](attachments/Pasted%20image%2020210325201407.png)
+Нажмите клавишу Windows, чтобы открыть меню Пуск, и выполните поиск PATH.
 
-Select Edit the system environment variables, and then click Environment Variables.
+![Поиск переменной PATH](attachments/Pasted%20image%2020210325201407.png)
 
-![](attachments/Pasted%20image%2020210325201541.png)
+Выберите "Edit the system environment variables" (Изменить системные переменные среды), а затем нажмите "Environment Variables" (Переменные среды).
 
-Select Path, and then click edit. Select new, and paste `C:\Program Files\Git\bin` or `C:\Program Files (x86)\Git\bin`, depending on which folder exists.
+![Редактирование переменной PATH](attachments/Pasted%20image%2020210325201541.png)
 
-Open a command line interface and check if PATH has been configured correctly by typing `git` and pressing enter. If so, continue following the steps in [the tutorial](README.md).
+Выберите "Path" (Путь), затем нажмите "Edit" (Изменить). Выберите "New" (Новый) и вставьте `C:\Program Files\Git\bin` или `C:\Program Files (x86)\Git\bin`, в зависимости от того, какая папка существует.
+
+Откройте командную строку и проверьте, была ли переменная PATH настроена правильно, введя `git` и нажав Enter. Если все правильно, продолжайте следовать шагам в [руководстве](README.md).

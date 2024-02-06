@@ -1,71 +1,71 @@
-##  Using Obsidian Git for the tech unfamiliar (minimal command line usage)
+## Настрйока Obsidian Git в Windows
 
-### Creating an account
+### Создание учетной записи
 
-Make an account at [github.com](https://github.com/). Create an empty repository.
+Зарегистрируйтесь на [github.com](https://github.com/). Создайте пустой репозиторий.
 
-![](attachments/Pasted%20image%2020210325192825.png)
+![Регистрация на GitHub](attachments/Pasted%20image%2020210325192825.png)
 
-### Software installation
+### Установка программного обеспечения
 
-Install [git for windows](https://git-scm.com/download/win). 
+Установите [git для Windows](https://git-scm.com/download/win).
 
-When installing, make sure to enable the command line PATH, otherwise obsidian git has no means of accessing and automating the backup for you.
+При установке убедитесь, что включена опция добавления git в переменную среды PATH, иначе Obsidian Git не сможет автоматически создавать резервные копии.
 
-![](attachments/Pasted%20image%2020210325185111.png)
+![Установка Git](attachments/Pasted%20image%2020210325185111.png)
 
-Check if git was installed successfully by opening the command line interface [windows+r , `cmd`, enter ] and inputting `git` and pressing enter.
+Проверьте успешность установки Git, открыв командную строку [Windows + R, введите `cmd`, Enter] и введите `git`, затем нажмите Enter.
 
-If successful, it should output something like this.
+Если установка прошла успешно, вы увидите что-то подобное.
 
-![](attachments/Pasted%20image%2020210325191407.png)
+![Проверка установки Git](attachments/Pasted%20image%2020210325191407.png)
 
-If this doesn't appear, refer to [fixing path](Fixing%20PATH.md).
+Если этого не произошло, обратитесь к [руководству по исправлению переменной PATH](Fixing%20PATH.md).
 
-Afterwards, install [github desktop](https://desktop.github.com/). We'll be using github desktop to set up the repository as well as manage credentials.
+Затем установите [GitHub Desktop](https://desktop.github.com/). Мы будем использовать GitHub Desktop для настройки репозитория и управления учетными данными.
 
-### Cloning the repository and setting up your credentials
-Once in github desktop, select File > Options > Account, and log in to your github account.
+### Клонирование репозитория и настройка учетных данных
 
-![](attachments/Pasted%20image%2020210325202742.png)
+После открытия GitHub Desktop выберите File > Options > Account и войдите в свою учетную запись GitHub.
 
-Now, press File > Clone Repository, and select the empty repository you just created. Where you clone this repository doesn't matter, as long as you remember its location.
+![Настройка учетной записи в GitHub Desktop](attachments/Pasted%20image%2020210325202742.png)
 
-In the top toolbar once again, select Repository > Open in Command Prompt. Paste `git config --global credential.helper wincred` and press enter. That should set up your credentials.
+Теперь выберите File > Clone Repository, и выберите пустой репозиторий, который вы только что создали. Место, куда вы клонируете этот репозиторий, не имеет значения, главное, чтобы вы помнили его расположение.
 
-### Viewing hidden files
-In explorer:
+В верхней панели инструментов снова выберите Repository > Open in Command Prompt. Вставьте `git config --global credential.helper wincred` и нажмите Enter. Это настроит ваши учетные данные.
 
-- Select View > Options > Change folder and search options.
+### Просмотр скрытых файлов
 
-- Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.
+В проводнике:
 
+- Выберите Вид > Параметры > Изменение параметров папки и поиска.
 
-![](attachments/Pasted%20image%2020210325194749.png)
+- Выберите вкладку Вид и в разделе Дополнительные параметры выберите Показывать скрытые файлы, папки и диски, затем нажмите ОК.
 
-### Making your vault a repository
-Open the location of the cloned repository and select the formerly hidden .git folder. Cut this folder and paste it into your vault's root directory.
+![Просмотр скрытых файлов](attachments/Pasted%20image%2020210325194749.png)
 
-Open github desktop. It should normally have a notification informing you it can no longer find your repository.
+### Создание вашего хранилища в репозитории
 
-![](attachments/Pasted%20image%2020210325195430.png)
+Откройте местоположение склонированного репозитория и выберите ранее скрытую папку .git. Вырежьте эту папку и вставьте ее в корневой каталог вашего хранилища.
 
-Press locate, and point it to the location of your vault, which should now also house the .git folder.
+Откройте GitHub Desktop. Обычно он уведомит вас о том, что больше не может найти ваш репозиторий.
 
-Github desktop will have registered a vast number of changes made to your repository. This is perfectly normal. In the bottom-left corner, fill in the summary and description and then press commit.
+![Уведомление о не найденном репозитории](attachments/Pasted%20image%2020210325195430.png)
 
-![](attachments/Pasted%20image%2020210325195854.png)
+Нажмите "Locate" и укажите путь к вашему хранилищу, которое теперь также содержит папку .git.
 
-After committing, press push origin. This button may also read Publish repository to Github.
+GitHub Desktop зарегистрирует множество изменений, внесенных в ваш репозиторий. Это нормально. В левом нижнем углу введите краткое и описание, а затем нажмите "Commit".
 
-![image](https://user-images.githubusercontent.com/81381984/113364957-20feba00-9355-11eb-9fed-f5540692b7ea.png)
+![Коммит изменений](attachments/Pasted%20image%2020210325195854.png)
 
-![](attachments/Pasted%20image%2020210325211723.png)
+После фиксации нажмите "Push origin". Эта кнопка также может называться "Publish repository to GitHub".
 
-### Installing the Obsidian Git plugin
+![Отправка изменений на GitHub](attachments/Pasted%20image%2020210325211723.png)
 
-Disable safe mode in the community plugins tab if you haven't already. Browse the community plugins and search for `Obsidian Git`. Install and enable it. Open the command palette (ctrl+p) and type `git`, and select commit and push all changes. If this tutorial was followed successfully, you should have received a notification that you just successfully committed and pushed files.
+### Установка плагина Obsidian Git
 
-In the obsidian git plugin options, you can set a backup interval, to determine how often automatic backups are made. You can still use the above method to guarantee that important changes are definitely pushed to github however.
+Отключите безопасный режим во вкладке плагинов сообщества, если вы этого еще не сделали. Перейдите в сообщества плагинов, найдите "Obsidian Git", установите и включите его. Откройте палитру команд (Ctrl+P), введите `git` и выберите "Commit and push all changes". Если вы успешно следовали этому руководству, вы должны получить уведомление о том, что вы только что успешно зафиксировали и отправили файлы.
 
-If you're accessing your vault through git across multiple devices, the github desktop application can be useful to resolve conflicts, but is otherwise no longer needed, as the obsidian git plugin will have automated the committing and pushing process.
+В настройках плагина Obsidian Git вы можете установить интервал резервного копирования, чтобы определить, как часто выполнять автоматические резервные копии. Вы всегда можете использовать вышеописанный метод, чтобы гарантировать, что важные изменения точно отправлены на GitHub.
+
+Если вы получаете доступ к своему хранилищу через Git на нескольких устройствах, приложение GitHub Desktop может быть полезным для разрешения конфликтов, но в противном случае оно больше не нужно, так как плагин Obsidian Git автоматизирует процесс фиксации и отправки.

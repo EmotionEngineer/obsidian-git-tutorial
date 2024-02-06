@@ -1,4 +1,8 @@
-## Настрйока Obsidian Git в Windows
+## Настройка Obsidian Git в Windows
+
+### Создание локального хранилища Obsidian (Vault)
+
+Установите Obsidian и следуйте [инструкциям](https://help.obsidian.md/Getting+started/Create+a+vault).
 
 ### Создание учетной записи
 
